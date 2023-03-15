@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .container {
+                max-width: 1188px;
+                padding: 0px 64px;
+                margin: 0 auto;
+            }
+
+            .item .question {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 64px;
+                padding: 0px 48px 0px 24px;
+                background-color: #f8f7f4;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .item .answer {
+                display: block;
+                padding: 12px 24px;
+                height: 0px;
+                overflow: hidden;
+                transition: 0.3s linear;
+            }
+
+            .item .answer .txt {
+                color: #111c1c;
+                font-size: 12px;
+                line-height: 16px;
+                opacity: 0;
+                transition: all 0.3s;
+                transition-delay: 0.15s;
+            }
+
+            .item.active .answer .txt {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="items">
+                <div class="item">
+                    <div class="question">
+                        <span class="txt">Wat kost het advies?</span>
+                    </div>
+                    <div class="answer">
+                        <p class="txt">De adviesgesprekken zijn helemaal gratis!</p>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <div class="item">
+                        <div class="question">
+                            <span class="txt">Wat kost het advies?</span>
+                        </div>
+                        <div class="answer">
+                            <p class="txt">De adviesgesprekken zijn helemaal gratis!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

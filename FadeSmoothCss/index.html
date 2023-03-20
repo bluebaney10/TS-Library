@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            div {
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                font-size: 40px;
+                color: black;
+            }
+
+            .new {
+                opacity: 0;
+            }
+
+            .old,
+            .new {
+                transition: opacity 0.5s linear;
+            }
+
+            .wrap:hover .old {
+                opacity: 0;
+            }
+            .wrap:hover .new {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="new">New</div>
+            <div class="old">Old</div>
+        </div>
+    </body>
+</html>

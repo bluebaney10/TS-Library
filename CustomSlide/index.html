@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .custom-image-slide {
+                position: relative;
+                width: 100%;
+                min-height: 306px;
+                overflow: hidden;
+            }
+
+            .transformRight {
+                transform: translateX(calc(-100% - 24px));
+            }
+
+            .transformLeft {
+                transform: translateX(calc(100% + 24px));
+            }
+
+            .transition {
+                transition: transform 100ms ease-in;
+            }
+
+            .cards,
+            .cards-pre {
+                position: relative;
+                width: 100%;
+                min-height: 306px;
+                z-index: 2;
+            }
+
+            .card-list {
+                width: 1424px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .card {
+                position: absolute;
+                cursor: pointer;
+            }
+
+            .card-box {
+                width: 266px;
+                height: 266px;
+            }
+
+            .card-box .image {
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .card-box .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s;
+            }
+
+            .controls {
+                position: relative;
+                height: 48px;
+            }
+
+            .bullet-box {
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                transform: translate(-50%, 0%);
+                z-index: 5;
+            }
+            .bullet-box ul.bullets {
+                display: inline-block;
+            }
+            .bullet-box ul.bullets li {
+                list-style: none;
+                width: 6px;
+                height: 6px;
+                background-color: rgba(17, 28, 28, 0.25);
+                display: inline-block;
+                float: left;
+                margin: 0px 4px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .bullet-box ul.bullets li.active {
+                background-color: rgba(17, 28, 28, 1);
+            }
+
+            .nav-box {
+                width: fit-content;
+                height: 48px;
+                position: relative;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="custom-image-slide">
+            <div class="cards">
+                <div class="card-list">
+                    <div class="card" data-value="0">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-1.jpg" />
+                            </div>
+                            <span>Ink 0</span>
+                        </div>
+                    </div>
+
+                    <div class="card" data-value="1">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-2.jpg" />
+                            </div>
+                            <span>Ink 1</span>
+                        </div>
+                    </div>
+
+                    <div class="card" data-value="2">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-3.jpg" />
+                            </div>
+                            <span>Ink 2</span>
+                        </div>
+                    </div>
+
+                    <div class="card" data-value="3">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-4.jpg" />
+                            </div>
+                            <span>Ink 3</span>
+                        </div>
+                    </div>
+
+                    <div class="card" data-value="4">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-5.jpg" />
+                            </div>
+                            <span>Ink 4</span>
+                        </div>
+                    </div>
+
+                    <div class="card" data-value="5">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-6.jpg" />
+                            </div>
+                            <span>Ink 5</span>
+                        </div>
+                    </div>
+
+                    <div class="card" data-value="6">
+                        <div class="card-box">
+                            <div class="image">
+                                <img src="images/ink-7.jpg" />
+                            </div>
+                            <span>Ink 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="bullet-box"></div>
+                <div class="nav-box">
+                    <div class="navs">
+                        <div class="nav-txt">
+                            <span class="txt current-txt">01</span>
+                            <span class="txt label-txt">/</span>
+                            <span class="txt all-txt">07</span>
+                        </div>
+                        <div class="nav-bts">
+                            <button class="circle-bt bt-prev">
+                                <div class="icon-arr-left">
+                                    <svg>
+                                        <use
+                                            xlink:href="/assetfiles/img/tabledusudv4/svgs/arrleft-ipfv3.svg#arrleft-obj-ipfv3"
+                                        ></use>
+                                    </svg>
+                                </div>
+                            </button>
+                            <button class="circle-bt bt-next">
+                                <div class="icon-arr-right">
+                                    <svg>
+                                        <use
+                                            xlink:href="/assetfiles/img/tabledusudv4/svgs/arrleft-ipfv3.svg#arrleft-obj-ipfv3"
+                                        ></use>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

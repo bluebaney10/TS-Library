@@ -1,32 +1,28 @@
-let stepLayoutArr: Array<HTMLElement> = [];
+const layout1 = this.document.querySelector('.layout1');
+const layout2 = this.document.querySelector('.layout2');
 
-this.document.querySelectorAll<HTMLElement>('.bt-step-next').forEach((item: HTMLElement) => {
+this.document.querySelectorAll<HTMLElement>('.bt-next').forEach((item: HTMLElement) => {
     item.addEventListener('click', () => {
         console.log('click next');
+        layout1?.classList.remove('relate');
+        layout1?.classList.remove('active');
+
+        layout2?.classList.add('active');
+        setTimeout(() => {
+            layout2?.classList.add('relate');
+        }, 1000);
     });
 });
 
-this.document.querySelectorAll<HTMLElement>('.step-control .configuration-layout').forEach((item: HTMLElement) => {
-    stepLayoutArr.push(item);
+this.document.querySelectorAll<HTMLElement>('.bt-back').forEach((item: HTMLElement) => {
+    item.addEventListener('click', () => {
+        console.log('click back');
+        layout2?.classList.remove('relate');
+        layout2?.classList.remove('active');
+
+        layout1?.classList.add('active');
+        setTimeout(() => {
+            layout1?.classList.add('relate');
+        }, 500);
+    });
 });
-
-
-function changeLayoutStep(remove: number, add: number) {
-    //this.isMoving = true;
-    // this.stepLayoutArr[remove].classList.add("prepare-deactive");
-    //  this.stepLayoutArr[remove].classList.remove("active");
-    // this.element.findFirst('.bt-close-step')?.classList.remove('hide');
-    // this.removeToolTips();
-    //  this.removePopup3DConfigurationZoom();
-
-    setTimeout(() => {
-        // this.stepLayoutArr[remove].classList.remove("prepare-deactive");
-    }, 300);
-    setTimeout(() => {
-        //this.stepLayoutArr[add].classList.add("active");
-        // this.scrollStepToTop();
-        //  this.isMoving = false;
-    }, 400);
-}
-
-//   this.changeLayoutStep(this.step, this.step + 1);
